@@ -18,6 +18,7 @@ def mod(num_1, num_2)
   num_1.to_f % num_2.to_f
 end
 
+
 puts "Simple Calc"
 25.times {print"-"}
 puts
@@ -26,10 +27,15 @@ num_1 = gets.chomp
 puts "Enter Second Number"
 num_2 = gets.chomp
 puts
+puts "1 = Multiply, 2 = addition, 3 = subtraction"
+user_entry = gets.chomp
 
-puts "Multiplied = #{multiply(num_1, num_2)}"
-puts "Divided = #{divided(num_1, num_2)}"
-puts "subtracted = #{subtracted(num_1, num_2)}"
-puts "Added = #{added(num_1, num_2)}"
-puts "Mod = #{mod(num_1, num_2)}"
-
+if user_entry == "1"
+  puts "Multiply = #{multiply(num_1, num_2)}"
+elsif user_entry == "2"
+  puts "addition= #{added(num_1, num_2)}"
+elsif user_entry == "3"
+  puts "subtraction #{subtracted(num_1, num_2)}"
+else
+  puts "invalid entry"
+end
