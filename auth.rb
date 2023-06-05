@@ -1,8 +1,8 @@
 users = [
-  {username: "Samuel", password:"Test1" },
+  {username: "Death", password:"Test1" },
   {username: "Manuel", password:"Test2" },
-  {username: "Kamuel", password:"Test3" },
-  {username: "Bamuel", password:"Test4" },
+  {username: "Kira", password:"Test3" },
+  {username: "God", password:"Test4" },
 ]
 
 def auth_user(username, password, list_of_users)

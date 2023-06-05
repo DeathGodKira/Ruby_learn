@@ -1,4 +1,7 @@
+require_relative '../Secure_user'
+
 class Student
+  include Secure_user
   attr_accessor :first_name, :last_name, :email, :username, :password
 
 
@@ -14,9 +17,9 @@ class Student
   end
 end
 
-samuel = Student.new("Samuel", "Fässler", "samuel1", "samuel@ex.com", "test1")
+kira = Student.new("Kira", "Death", "Kira1", "Death@ex.com", "test1")
 john = Student.new("John", "Doe", "JoDon1", "john@ex.com", "test2")
 
-puts samuel
-puts john
 
+hashed_password = kira.create_hash_digest(kira.password)
+p hashed_password
